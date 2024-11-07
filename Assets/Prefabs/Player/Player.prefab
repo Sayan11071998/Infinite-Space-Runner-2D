@@ -129,6 +129,7 @@ MonoBehaviour:
   _playerSpeed: 5
   minY: -4.5
   maxY: 4.5
+  _playerHealth: 100
   rb: {fileID: 1400456491706387176}
 --- !u!61 &1212901673868284792
 BoxCollider2D:

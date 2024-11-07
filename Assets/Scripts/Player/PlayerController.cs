@@ -3,12 +3,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _playerSpeed;
+    [SerializeField] private float _playerHealth = 100f;
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
 
     [SerializeField] private Rigidbody2D rb;
 
     private Vector2 _playerMoveDirection;
+
 
     private void Update()
     {
@@ -22,5 +24,17 @@ public class PlayerController : MonoBehaviour
 
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
         transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
+    }
+
+    public void TakeDamage(float _damageAmount)
+    {
+        _playerHealth -= _damageAmount;
+        Debug.Log("Player Health: " + _playerHealth);
+
+        if (_playerHealth <= 0)
+        {
+            Debug.Log("Player is Dead");
+            // Destroy(gameObject);
+        }
     }
 }

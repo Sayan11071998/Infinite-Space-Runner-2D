@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float _enemySpeed;
+    [SerializeField] private float _enemyDamageAmount;
 
     private void Update()
     {
@@ -14,6 +15,16 @@ public class EnemyController : MonoBehaviour
         if (collision.tag == "Border")
         {
             Destroy(this.gameObject);
+        }
+
+        if (collision.tag == "Player")
+        {
+            PlayerController _playerREF = collision.GetComponent<PlayerController>();
+            if (_playerREF != null)
+            {
+                _playerREF.TakeDamage(_enemyDamageAmount);
+                Destroy(this.gameObject);
+            }
         }
     }
 }
