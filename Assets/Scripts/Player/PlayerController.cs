@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _playerSpeed;
+    [SerializeField] private float minY;
+    [SerializeField] private float maxY;
 
     [SerializeField] private Rigidbody2D rb;
 
@@ -19,5 +19,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(0, _playerMoveDirection.y * _playerSpeed);
+
+        float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
+        transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
     }
 }
