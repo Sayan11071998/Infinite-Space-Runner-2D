@@ -8,4 +8,12 @@ public class EnemyController : MonoBehaviour
     {
         transform.position += Vector3.left * _enemySpeed * Time.deltaTime;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Border")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

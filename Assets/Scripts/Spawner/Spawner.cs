@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject _spawnItem;
 
