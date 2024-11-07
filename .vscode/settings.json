@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Infinite-Runner-2D.sln"
+    "dotnet.defaultSolution": "Infinite-Space-Runner-2D.sln"
 }
