@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 455478448}
   - component: {fileID: 455478449}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: AlienOctopusSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 455478447}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.28, y: 0, z: 0}
+  m_LocalPosition: {x: 9.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263,7 +263,7 @@ MonoBehaviour:
   _maxY: 3
   _minX: 4
   _minY: -4
-  _timeElasped: 1.5
+  _spawnInterval: 2
 --- !u!1 &1506357792
 GameObject:
   m_ObjectHideFlags: 0

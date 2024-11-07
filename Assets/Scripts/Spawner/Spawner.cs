@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
@@ -10,16 +8,21 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField] private float _maxY;
     [SerializeField] private float _minX;
     [SerializeField] private float _minY;
-    
-    [SerializeField] private float _timeElasped;
-    private float spawnTime;
+
+    [SerializeField] private float _spawnInterval;
+    private float _nextSpawnTime;
+
+    private void Start()
+    {
+        _nextSpawnTime = Time.time + _spawnInterval;
+    }
 
     private void Update()
     {
-        if (Time.time > spawnTime)
+        if (Time.time >= _nextSpawnTime)
         {
             Spawn();
-            spawnTime = Time.time + _timeElasped;
+            _nextSpawnTime = Time.time + _spawnInterval;
         }
     }
 
@@ -28,6 +31,7 @@ public class NewBehaviourScript : MonoBehaviour
         float randomX = Random.Range(_minX, _maxX);
         float randomY = Random.Range(_minY, _maxY);
 
-        Instantiate(_spawnItem, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
+        Vector3 spawnPosition = transform.position + new Vector3(randomX, randomY, 0);
+        Instantiate(_spawnItem, spawnPosition, Quaternion.identity);
     }
 }
