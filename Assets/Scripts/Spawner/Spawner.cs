@@ -26,6 +26,8 @@ public class Spawner : MonoBehaviour
 
     private void Spawn()
     {
+        if (GameOverUIController.Instance._isGameOver) return;
+
         float randomY = Random.Range(_minY, _maxY);
 
         Vector3 spawnPosition = transform.position + new Vector3(0, randomY, 0);
