@@ -43,8 +43,7 @@ public class GameManager : MonoBehaviour
     {
         _gameOverUI = FindObjectOfType<GameOverUIController>();
 
-        /**/
-        if(scene.buildIndex == 1)
+        if (scene.buildIndex == 1)
             _isGameOver = false;
     }
 }
