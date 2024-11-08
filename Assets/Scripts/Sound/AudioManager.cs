@@ -15,8 +15,8 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioType[] audioList;
 
-    public float bgmVolume = 1f;
-    public float sfxVolume = 1f;
+    [Range(0, 1)] public float bgmVolume = 1f;
+    [Range(0, 1)] public float sfxVolume = 1f;
 
     private void Awake()
     {
@@ -46,17 +46,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip GetAudioClip(AudioTypeList audio)
     {
         AudioType audioItem = Array.Find(audioList, item => item.audioType == audio);
-        
+
         if (audioItem != null)
             return audioItem.audioClip;
-        
+
         return null;
     }
 
     public void PlayBGM(AudioTypeList audio)
     {
         AudioClip clip = GetAudioClip(audio);
-        
+
         if (clip == null) return;
 
         audioSourceBGM.clip = clip;
@@ -66,7 +66,7 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioTypeList audio)
     {
         AudioClip clip = GetAudioClip(audio);
-        
+
         if (clip == null) return;
 
         audioSourceSFX.PlayOneShot(clip);

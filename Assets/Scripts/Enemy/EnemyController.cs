@@ -7,23 +7,26 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        EnemyMovement();
+    }
+
+    private void EnemyMovement()
+    {
         transform.position += Vector3.left * _enemySpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Border")
-        {
-            Destroy(this.gameObject);
-        }
+        if (collision.CompareTag("Border")) Destroy(gameObject);
 
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             PlayerController _playerREF = collision.GetComponent<PlayerController>();
+
             if (_playerREF != null)
             {
                 _playerREF.TakeDamage(_enemyDamageAmount);
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }

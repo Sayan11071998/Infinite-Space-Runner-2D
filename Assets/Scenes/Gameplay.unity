@@ -1411,7 +1411,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: a0627db4f53295a4a9fdb702138a9345, type: 3}
   - audioType: 4
     audioClip: {fileID: 8300000, guid: 66408ea6033a3f345bfddca754c2d885, type: 3}
-  bgmVolume: 0.5
+  bgmVolume: 0.24
   sfxVolume: 1
 --- !u!1 &1506357792
 GameObject:

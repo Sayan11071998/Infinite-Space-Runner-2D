@@ -9,24 +9,26 @@ public class ScoreItemSpawnController : MonoBehaviour
 
     private void Update()
     {
+        ScoreItemMovement();
+    }
+
+    private void ScoreItemMovement()
+    {
         transform.position += Vector3.left * _ScoreItemSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Border")
-        {
-            Destroy(this.gameObject);
-        }
+        if (collision.CompareTag("Border")) Destroy(gameObject);
 
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             PlayerController _playerREF = collision.GetComponent<PlayerController>();
 
             if (_playerREF != null)
             {
                 _playerREF.IncreaseScore(_itemScoreValue);
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }
