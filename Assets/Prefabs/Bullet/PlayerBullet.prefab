@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3043788583899969453}
   - component: {fileID: 5357098588747265239}
   - component: {fileID: 5643143844662422869}
-  - component: {fileID: 2214923639493628444}
+  - component: {fileID: -980241982218725207}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Bullet
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.05703082}
   m_EdgeRadius: 0
---- !u!114 &2214923639493628444
+--- !u!114 &-980241982218725207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,4 +172,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletSpeed: 10
-  _damage: 10
