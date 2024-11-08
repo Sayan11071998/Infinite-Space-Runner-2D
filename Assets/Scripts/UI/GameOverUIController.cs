@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameOverUIController : MonoBehaviour
-{
+{   
     [SerializeField] GameObject _gameOverPanel;
+
+    public bool _isGameOver = false;
 
     private void Awake()
     {
@@ -14,6 +16,7 @@ public class GameOverUIController : MonoBehaviour
 
     public void GameOver()
     {
+        _isGameOver = true;
         _gameOverPanel.SetActive(true);
     }
 

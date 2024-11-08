@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (_gameOverPanel._isGameOver) return;
+
         float _directionYInput = Input.GetAxis("Vertical");
         _playerMoveDirection = new Vector2(0, _directionYInput).normalized;
     }
@@ -43,10 +45,14 @@ public class PlayerController : MonoBehaviour
 
         if (_playerHealth <= 0)
         {
-            Debug.Log("Player is Dead");
-            _gameOverPanel.GameOver();
-            // Destroy(gameObject);
+            PlayerDeath();
         }
+    }
+
+    public void PlayerDeath()
+    {
+        _gameOverPanel.GameOver();
+        Destroy(gameObject);
     }
 
     public void Heal(float _healAmount)
