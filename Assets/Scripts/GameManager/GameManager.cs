@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Re-assign _gameOverUI to the newly loaded instance in the scene
         _gameOverUI = FindObjectOfType<GameOverUIController>();
     }
 }
