@@ -33,6 +33,7 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage()
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.EnemyHit);
         Destroy(gameObject);
     }
 }

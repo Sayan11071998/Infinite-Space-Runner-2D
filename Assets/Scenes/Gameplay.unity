@@ -2183,6 +2183,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 66408ea6033a3f345bfddca754c2d885, type: 3}
   - audioType: 5
     audioClip: {fileID: 8300000, guid: 343bb42302ab6f64ca4a2657b69be2f5, type: 3}
+  - audioType: 6
+    audioClip: {fileID: 8300000, guid: c7ee850eed102bf4796d5649e7720479, type: 3}
+  - audioType: 7
+    audioClip: {fileID: 8300000, guid: 125c09de0dbb8f146a92469d6095d131, type: 3}
   bgmVolume: 0.2
   sfxVolume: 1
 --- !u!1 &1506357792

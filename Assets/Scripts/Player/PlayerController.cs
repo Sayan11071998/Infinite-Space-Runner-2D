@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
 
     private void ShootBullet()
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.BulletFire);
         Quaternion bulletRotation = Quaternion.Euler(0, 0, 0);
         Instantiate(_bulletPrefab, bulletSpawnPoint.position, bulletRotation);
     }
