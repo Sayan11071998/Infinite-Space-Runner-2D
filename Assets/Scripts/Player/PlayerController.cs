@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxY;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameOverUIController _gameOverPanel;
 
     private Vector2 _playerMoveDirection;
 
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
         if (_playerHealth <= 0)
         {
             Debug.Log("Player is Dead");
+            _gameOverPanel.GameOver();
             // Destroy(gameObject);
         }
     }
