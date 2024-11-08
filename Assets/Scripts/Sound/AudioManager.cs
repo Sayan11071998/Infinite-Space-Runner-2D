@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
     private static AudioManager instance;
     public static AudioManager Instance { get { return instance; } }
 
+    [Header("Game Sound Config")]
     public AudioSource audioSourceBGM;
     public AudioSource audioSourceSFX;
 
@@ -86,5 +87,6 @@ public enum AudioTypeList
     GameOverRestartButtonSound,
     GameOverMenuButtonSound,
     EnemyHit,
-    BulletFire
+    BulletFire,
+    EnemyDeath
 }

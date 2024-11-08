@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [Header("Spawner Details")]
     [SerializeField] private GameObject _spawnItem;
 
     [SerializeField] private float _minY;

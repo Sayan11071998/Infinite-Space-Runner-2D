@@ -2,21 +2,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Player Stats")]
     [SerializeField] private float _playerSpeed;
     [SerializeField] private float _playerHealth = 100f;
     [SerializeField] private float _playerScore = 0f;
 
+    [Header("Player Movement Bounds")]
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
 
+    [Header("Required Game Objects")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameUIController _gameUIPanel;
     [SerializeField] private GameOverUIController _gameOverPanel;
 
     private Vector2 _playerMoveDirection;
 
+    [Header("Bullet Properties")]
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletFireRate = 0.5f;

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] private float _enemySpeed;
     [SerializeField] private float _enemyDamageAmount;
 
