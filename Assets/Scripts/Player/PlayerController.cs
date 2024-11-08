@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float _damageAmount)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyCollisionSound);
+        Camera.main.GetComponent<CameraShake>().TriggerShake(0.15f, 0.3f);
 
         _playerHealth -= _damageAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
