@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _playerMoveDirection;
 
+    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private float bulletFireRate = 0.5f;
+    private float nextFireTime = 0f;
+
     private void Start()
     {
         _gameUIPanel.UpdateHealth(_playerHealth);
@@ -31,6 +36,12 @@ public class PlayerController : MonoBehaviour
         float _directionYInput = Input.GetAxis("Vertical");
 
         _playerMoveDirection = new Vector2(_directionXInput, _directionYInput).normalized;
+
+        if (Input.GetButton("Fire1") && Time.time > nextFireTime)
+        {
+            ShootBullet();
+            nextFireTime = Time.time + bulletFireRate;
+        }
     }
 
     private void FixedUpdate()
@@ -55,7 +66,6 @@ public class PlayerController : MonoBehaviour
 
         _playerHealth -= _damageAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
-        Debug.Log("Player Health: " + _playerHealth);
 
         _gameUIPanel.UpdateHealth(_playerHealth);
 
@@ -71,20 +81,24 @@ public class PlayerController : MonoBehaviour
     public void Heal(float _healAmount)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.HealthPickupSound);
-        
+
         _playerHealth += _healAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
-        
+
         _gameUIPanel.UpdateHealth(_playerHealth);
-        Debug.Log("Player Health: " + _playerHealth);
     }
 
     public void IncreaseScore(float _ScoreValue)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.ScorePickupSound);
-        
+
         _playerScore += _ScoreValue;
         _gameUIPanel.UpdateScore(_playerScore);
-        Debug.Log("Player Score: " + _playerScore);
+    }
+
+    private void ShootBullet()
+    {
+        Quaternion bulletRotation = Quaternion.Euler(0, 0, 0);
+        Instantiate(_bulletPrefab, bulletSpawnPoint.position, bulletRotation);
     }
 }
