@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _playerSpeed;
     [SerializeField] private float _playerHealth = 100f;
+    [SerializeField] private float _playerScore = 0f;
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
 
@@ -43,5 +44,11 @@ public class PlayerController : MonoBehaviour
         _playerHealth += _healAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
         Debug.Log("Player Health: " + _playerHealth);
+    }
+
+    public void IncreaseScore(float _ScoreValue)
+    {
+        _playerScore += _ScoreValue;
+        Debug.Log("Player Score: " + _playerScore);
     }
 }

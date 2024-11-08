@@ -153,6 +153,7 @@ Transform:
   m_Children:
   - {fileID: 455478448}
   - {fileID: 728219142}
+  - {fileID: 442379043}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194557121
@@ -401,6 +402,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.149656, y: 0.83847046}
   m_EdgeRadius: 0
+--- !u!1 &442379042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442379043}
+  - component: {fileID: 442379044}
+  m_Layer: 0
+  m_Name: ScoreItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442379043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442379042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.9084888, y: 0.28371978, z: -11.300524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 184756380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442379044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442379042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec25af7bcf6a7e438a6554d65c799b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnItem: {fileID: 2500015423004043640, guid: edbef50f794678e4a9390345fb1493dd, type: 3}
+  _minY: -4.5
+  _maxY: 4.5
+  _spawnInterval: 2
 --- !u!1 &455478447
 GameObject:
   m_ObjectHideFlags: 0

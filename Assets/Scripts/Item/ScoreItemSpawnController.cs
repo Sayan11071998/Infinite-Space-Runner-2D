@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealItemSpawnController : MonoBehaviour
+public class ScoreItemSpawnController : MonoBehaviour
 {
-    [SerializeField] private float _itemSpeed;
-    [SerializeField] private float _itemHealValue;
+    [SerializeField] private float _ScoreItemSpeed;
+    [SerializeField] private float _itemScoreValue;
 
     private void Update()
     {
-        transform.position += Vector3.left * _itemSpeed * Time.deltaTime;
+        transform.position += Vector3.left * _ScoreItemSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +25,7 @@ public class HealItemSpawnController : MonoBehaviour
 
             if (_playerREF != null)
             {
-                _playerREF.Heal(_itemHealValue);
+                _playerREF.IncreaseScore(_itemScoreValue);
                 Destroy(this.gameObject);
             }
         }
