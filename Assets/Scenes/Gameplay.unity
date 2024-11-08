@@ -152,6 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 455478448}
+  - {fileID: 728219142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194557121
@@ -426,7 +427,7 @@ Transform:
   m_GameObject: {fileID: 455478447}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9084888, y: 0.28371978, z: -11.300524}
+  m_LocalPosition: {x: 7.9084888, y: 0.28371978, z: -11.30052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,6 +449,54 @@ MonoBehaviour:
   _minY: -4.5
   _maxY: 4.5
   _spawnInterval: 5
+--- !u!1 &728219141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728219142}
+  - component: {fileID: 728219143}
+  m_Layer: 0
+  m_Name: HealthItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &728219142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728219141}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.9084888, y: 0.28371978, z: -11.300524}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 184756380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728219143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728219141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec25af7bcf6a7e438a6554d65c799b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnItem: {fileID: 2500015423004043640, guid: d577045edafc1e544a1383f16579a458, type: 3}
+  _minY: -4.5
+  _maxY: 4.5
+  _spawnInterval: 2
 --- !u!1 &1506357792
 GameObject:
   m_ObjectHideFlags: 0

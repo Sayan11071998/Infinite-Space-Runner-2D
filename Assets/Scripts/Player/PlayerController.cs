@@ -37,4 +37,11 @@ public class PlayerController : MonoBehaviour
             // Destroy(gameObject);
         }
     }
+
+    public void Heal(float _healAmount)
+    {
+        _playerHealth += _healAmount;
+        _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
+        Debug.Log("Player Health: " + _playerHealth);
+    }
 }
