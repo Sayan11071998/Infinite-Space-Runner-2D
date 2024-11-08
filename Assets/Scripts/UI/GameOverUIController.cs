@@ -27,12 +27,13 @@ public class GameOverUIController : MonoBehaviour
     public void RestartGame()
     {
         GameManager.Instance._isGameOver = false;
-        AudioManager.Instance.PlaySFX(AudioTypeList.ButtonSound);
+        AudioManager.Instance.PlaySFX(AudioTypeList.GameOverRestartButtonSound);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.GameOverMenuButtonSound);
         SceneManager.LoadScene(0);
     }
 }

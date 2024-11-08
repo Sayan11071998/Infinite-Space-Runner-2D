@@ -86,5 +86,6 @@ public enum AudioTypeList
     HealthPickupSound,
     ScorePickupSound,
     EnemyCollisionSound,
-    ButtonSound
+    GameOverRestartButtonSound,
+    GameOverMenuButtonSound,
 }
