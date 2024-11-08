@@ -9,10 +9,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxY;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameUIController _gameUIPanel;
     [SerializeField] private GameOverUIController _gameOverPanel;
 
     private Vector2 _playerMoveDirection;
 
+    private void Start()
+    {
+        _gameUIPanel.UpdateHealth(_playerHealth);
+        _gameUIPanel.UpdateScore(_playerScore);
+    }
 
     private void Update()
     {
@@ -33,6 +39,8 @@ public class PlayerController : MonoBehaviour
         _playerHealth -= _damageAmount;
         Debug.Log("Player Health: " + _playerHealth);
 
+        _gameUIPanel.UpdateHealth(_playerHealth);
+
         if (_playerHealth <= 0)
         {
             Debug.Log("Player is Dead");
@@ -45,12 +53,14 @@ public class PlayerController : MonoBehaviour
     {
         _playerHealth += _healAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
+        _gameUIPanel.UpdateHealth(_playerHealth);
         Debug.Log("Player Health: " + _playerHealth);
     }
 
     public void IncreaseScore(float _ScoreValue)
     {
         _playerScore += _ScoreValue;
+        _gameUIPanel.UpdateScore(_playerScore);
         Debug.Log("Player Score: " + _playerScore);
     }
 }
