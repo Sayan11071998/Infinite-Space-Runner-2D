@@ -42,5 +42,9 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         _gameOverUI = FindObjectOfType<GameOverUIController>();
+
+        /**/
+        if(scene.buildIndex == 1)
+            _isGameOver = false;
     }
 }

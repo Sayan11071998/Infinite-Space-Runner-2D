@@ -15,6 +15,7 @@ public class MainMenuUI : MonoBehaviour
 
     private void StartGame()
     {
+        GameManager.Instance._isGameOver = false;
         SceneManager.LoadScene(1);
     }
 
