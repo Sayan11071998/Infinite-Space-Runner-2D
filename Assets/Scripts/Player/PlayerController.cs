@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _playerSpeed;
     [SerializeField] private float _playerHealth = 100f;
     [SerializeField] private float _playerScore = 0f;
+
+    [SerializeField] private float minX;
+    [SerializeField] private float maxX;
     [SerializeField] private float minY;
     [SerializeField] private float maxY;
 
@@ -24,30 +27,38 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.Instance._isGameOver) return;
 
+        float _directionXInput = Input.GetAxis("Horizontal");
         float _directionYInput = Input.GetAxis("Vertical");
-        _playerMoveDirection = new Vector2(0, _directionYInput).normalized;
+
+        _playerMoveDirection = new Vector2(_directionXInput, _directionYInput).normalized;
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(0, _playerMoveDirection.y * _playerSpeed);
+        PlayerMovement();
+    }
 
+    private void PlayerMovement()
+    {
+        rb.velocity = new Vector2(_playerMoveDirection.x * _playerSpeed, _playerMoveDirection.y * _playerSpeed);
+
+        float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
         float clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
-        transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
+
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     public void TakeDamage(float _damageAmount)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyCollisionSound);
+
         _playerHealth -= _damageAmount;
+        _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
         Debug.Log("Player Health: " + _playerHealth);
 
         _gameUIPanel.UpdateHealth(_playerHealth);
 
-        if (_playerHealth <= 0)
-        {
-            PlayerDeath();
-        }
+        if (_playerHealth <= 0) PlayerDeath();
     }
 
     public void PlayerDeath()
