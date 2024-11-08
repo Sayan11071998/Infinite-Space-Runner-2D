@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Audio;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
 public class AudioManager : MonoBehaviour
 {
