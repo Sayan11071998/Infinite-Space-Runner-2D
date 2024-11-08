@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float _damageAmount)
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.EnemyCollisionSound);
         _playerHealth -= _damageAmount;
         Debug.Log("Player Health: " + _playerHealth);
 
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     public void Heal(float _healAmount)
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.HealthPickupSound);
         _playerHealth += _healAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
         _gameUIPanel.UpdateHealth(_playerHealth);
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseScore(float _ScoreValue)
     {
+        AudioManager.Instance.PlaySFX(AudioTypeList.ScorePickupSound);
         _playerScore += _ScoreValue;
         _gameUIPanel.UpdateScore(_playerScore);
         Debug.Log("Player Score: " + _playerScore);

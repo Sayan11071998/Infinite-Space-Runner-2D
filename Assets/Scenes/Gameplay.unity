@@ -1403,7 +1403,15 @@ MonoBehaviour:
   audioList:
   - audioType: 0
     audioClip: {fileID: 8300000, guid: 581defaa46254c84b9d7f58d58b3be51, type: 3}
-  bgmVolume: 1
+  - audioType: 1
+    audioClip: {fileID: 8300000, guid: 549b0ec5d1c6ec749b6e032ba8476d7a, type: 3}
+  - audioType: 2
+    audioClip: {fileID: 8300000, guid: 6709889a870e50f419afed1b93765d1f, type: 3}
+  - audioType: 3
+    audioClip: {fileID: 8300000, guid: a0627db4f53295a4a9fdb702138a9345, type: 3}
+  - audioType: 4
+    audioClip: {fileID: 8300000, guid: 66408ea6033a3f345bfddca754c2d885, type: 3}
+  bgmVolume: 0.5
   sfxVolume: 1
 --- !u!1 &1506357792
 GameObject:

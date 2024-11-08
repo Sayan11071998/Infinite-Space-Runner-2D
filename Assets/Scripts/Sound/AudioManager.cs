@@ -83,4 +83,8 @@ public class AudioType
 public enum AudioTypeList
 {
     BackGroundMusic,
+    HealthPickupSound,
+    ScorePickupSound,
+    EnemyCollisionSound,
+    ButtonSound
 }
