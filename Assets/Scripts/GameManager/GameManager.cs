@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,5 +29,21 @@ public class GameManager : MonoBehaviour
     {
         _isGameOver = true;
         _gameOverUI.GameOver();
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Re-assign _gameOverUI to the newly loaded instance in the scene
+        _gameOverUI = FindObjectOfType<GameOverUIController>();
     }
 }
