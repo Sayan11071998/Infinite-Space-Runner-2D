@@ -68,13 +68,14 @@ public class FinalBoss : MonoBehaviour
     }
 
     public void TakeDamage(float damage)
-    { 
+    {
         _currentHealth -= damage;
 
         if (_currentHealth <= 0)
             Die();
-        
+
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyHit);
+        Camera.main.GetComponent<CameraShake>().TriggerShake(0.15f, 0.3f);
     }
 
     private void FireBullet()
@@ -84,7 +85,7 @@ public class FinalBoss : MonoBehaviour
             GameObject bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.Euler(0, 0, 180f));
 
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            
+
             if (rb != null)
                 rb.velocity = Vector2.left * _bulletSpeed;
         }
@@ -92,6 +93,9 @@ public class FinalBoss : MonoBehaviour
 
     private void Die()
     {
+        PlayerController _playerREF = FindAnyObjectByType<PlayerController>();
+        _playerREF.IncreaseScore(200);
+
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyDeath);
         Destroy(gameObject);
     }
