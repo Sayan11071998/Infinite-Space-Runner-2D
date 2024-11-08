@@ -1449,19 +1449,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 965165761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2132791413}
-        m_TargetAssemblyTypeName: GameOverUIController, Assembly-CSharp
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &965165761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2140,19 +2128,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538624211}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2132791413}
-        m_TargetAssemblyTypeName: GameOverUIController, Assembly-CSharp
-        m_MethodName: RestartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1538624211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2419,6 +2395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameOverPanel: {fileID: 272963389}
+  _restartGameButton: {fileID: 1538624210}
+  _mainMenuButton: {fileID: 965165760}
 --- !u!1001 &409892055345648767
 PrefabInstance:
   m_ObjectHideFlags: 0
