@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemySpeed: 2
-  _enemyDamageAmount: 20
+  _enemyDamageAmount: 7
 --- !u!61 &4936134893947985666
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -127,10 +127,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSpeed: 5
-  _playerHealth: 20
+  _playerHealth: 100
   _playerScore: 0
   minX: -8.2
-  maxX: -3.3
+  maxX: -1.5
   minY: -4.5
   maxY: 3.2
   rb: {fileID: 1400456491706387176}

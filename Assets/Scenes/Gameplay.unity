@@ -1267,7 +1267,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 2500015423004043640, guid: edbef50f794678e4a9390345fb1493dd, type: 3}
   _minY: -4.5
   _maxY: 3.2
-  _spawnInterval: 2
+  _spawnInterval: 3
 --- !u!1 &455478447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 6512294108223003282, guid: 4241de554ad1cb04a989ff04bda5ae33, type: 3}
   _minY: -4.5
   _maxY: 3.2
-  _spawnInterval: 2
+  _spawnInterval: 4
 --- !u!1 &564914276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,7 +1586,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 2500015423004043640, guid: d577045edafc1e544a1383f16579a458, type: 3}
   _minY: -4.5
   _maxY: 3.2
-  _spawnInterval: 2
+  _spawnInterval: 10
 --- !u!1 &872080037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,7 +2167,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 2916131975741900804, guid: e2d8854e60b572e4198942d20e848a1f, type: 3}
   _minY: -4.5
   _maxY: 3.2
-  _spawnInterval: 2
+  _spawnInterval: 7
 --- !u!1 &1499027616
 GameObject:
   m_ObjectHideFlags: 0

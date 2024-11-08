@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _HealthItemSpeed: 5
-  _itemHealValue: 10
+  _itemHealValue: 15

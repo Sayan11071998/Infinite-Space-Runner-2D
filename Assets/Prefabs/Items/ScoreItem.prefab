@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ScoreItemSpeed: 5
-  _itemScoreValue: 20
+  _itemScoreValue: 10
