@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        _playerScore = 0f;
         _gameUIPanel.UpdateHealth(_playerHealth);
         _gameUIPanel.UpdateScore(_playerScore);
     }
