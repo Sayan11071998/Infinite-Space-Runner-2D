@@ -4,10 +4,12 @@ public class FinalBoss : MonoBehaviour
 {
     [Header("Boss Stats")]
     [SerializeField] private float _maxHealth = 100f;
-    [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private Transform _bulletSpawnPoint;
     [SerializeField] private float _fireRate = 1f;
     [SerializeField] private float _bulletSpeed = 5f;
+    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Transform _bulletSpawnPoint;
+    
+    
 
     [Header("Movement Properties")]
     [SerializeField] private Vector2 _roamAreaMin;

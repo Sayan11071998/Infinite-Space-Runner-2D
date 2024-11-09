@@ -27,7 +27,7 @@ public class PlayerBulletController : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            collision.GetComponent<EnemyController>().TakeDamage();
+            collision.GetComponent<EnemyController>().TakeDamage(_bulletDamageAmount);
         }
 
         if (collision.CompareTag("BossEnemy"))

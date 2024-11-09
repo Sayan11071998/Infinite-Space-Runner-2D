@@ -3,8 +3,16 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [Header("Enemy Stats")]
+    [SerializeField] private float _enemyMaxHealth;
     [SerializeField] private float _enemySpeed;
     [SerializeField] private float _enemyDamageAmount;
+
+    private float _currentHealth;
+
+    private void Start()
+    {
+        _currentHealth = _enemyMaxHealth;
+    }
 
     private void Update()
     {
@@ -32,9 +40,24 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float _damageAmount)
     {
+        _currentHealth -= _damageAmount;
+
+        if (_currentHealth <= 0)
+            Die();
+
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyHit);
+        Camera.main.GetComponent<CameraShake>().TriggerShake(0.15f, 0.3f);
+    }
+
+    private void Die()
+    {
+        PlayerController _playerREF = FindAnyObjectByType<PlayerController>();
+        _playerREF.IncreaseScore(50);
+
+        AudioManager.Instance.PlaySFX(AudioTypeList.EnemyDeath);
+
         Destroy(gameObject);
     }
 }
