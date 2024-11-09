@@ -172,15 +172,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb17e4ccda893945bad2588242b9871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 500
-  _bulletPrefab: {fileID: 6018507735816726917, guid: db4a3d4784fedda4aa5d1b9f6695d7cb, type: 3}
-  _bulletSpawnPoint: {fileID: 4480503430811322781}
+  _maxHealth: 100
   _fireRate: 1
   _bulletSpeed: 5
+  _bulletPrefab: {fileID: 6018507735816726917, guid: db4a3d4784fedda4aa5d1b9f6695d7cb, type: 3}
+  _bulletSpawnPoint: {fileID: 4480503430811322781}
   _roamAreaMin: {x: 2.11, y: -3.73}
   _roamAreaMax: {x: 7.68, y: 3.13}
   _moveSpeed: 2
   _changeDirectionInterval: 2
+  _playerREF: {fileID: 3933829120080076273, guid: b4daf0a2e5d1988488db874b1d9df859, type: 3}
 --- !u!1 &8092312974772950183
 GameObject:
   m_ObjectHideFlags: 0
