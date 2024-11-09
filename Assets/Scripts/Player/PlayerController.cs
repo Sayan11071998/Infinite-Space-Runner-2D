@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _playerMoveDirection;
     private float nextFireTime = 0f;
+
     private bool _isDoubleScoreActive = false;
+    private float _doubleScoreTimer = 0f;
 
     private void Start()
     {
@@ -48,6 +50,13 @@ public class PlayerController : MonoBehaviour
         {
             ShootBullet();
             nextFireTime = Time.time + bulletFireRate;
+        }
+
+        if (_doubleScoreTimer > 0)
+        {
+            _doubleScoreTimer -= Time.deltaTime;
+            if (_doubleScoreTimer <= 0)
+                _isDoubleScoreActive = false;
         }
     }
 
@@ -95,13 +104,6 @@ public class PlayerController : MonoBehaviour
         _gameUIPanel.UpdateHealth(_playerHealth);
     }
 
-    public IEnumerator DoubleScore(float duration)
-    {
-        _isDoubleScoreActive = true;
-        yield return new WaitForSeconds(duration);
-        _isDoubleScoreActive = false;
-    }
-
     public void IncreaseScore(float _ScoreValue)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.ScorePickupSound);
@@ -110,6 +112,12 @@ public class PlayerController : MonoBehaviour
         _playerScore += _actualPlayerScore;
 
         _gameUIPanel.UpdateScore(_playerScore);
+    }
+
+    public void ActivateDoubleScore(float _duration)
+    {
+        _isDoubleScoreActive = true;
+        _doubleScoreTimer = _duration;
     }
 
     private void ShootBullet()

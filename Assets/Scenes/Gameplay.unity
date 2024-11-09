@@ -1854,7 +1854,7 @@ MonoBehaviour:
   _spawnItem: {fileID: 1461308453027607792, guid: 75a3eb6affbcf7f4a81c734aa65b1051, type: 3}
   _minY: -4.5
   _maxY: 3.2
-  _spawnInterval: 2
+  _spawnInterval: 25
 --- !u!1 &1211135689
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class DoubleScorePowerup : MonoBehaviour
             if (_playerREF != null)
             {
                 AudioManager.Instance.PlaySFX(AudioTypeList.DoubleScorePowerup);
-                StartCoroutine(_playerREF.DoubleScore(_powerupDuration));
+                _playerREF.ActivateDoubleScore(_powerupDuration);
             }
 
             Destroy(gameObject);
