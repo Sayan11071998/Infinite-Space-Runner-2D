@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     private bool _isDoubleScoreActive = false;
     private float _doubleScoreTimer = 0f;
 
+    private bool _isHealthImmunityeActive = false;
+    private float _healthImmunityTimer = 0f;
+
     private void Start()
     {
         _playerScore = 0f;
@@ -58,6 +61,13 @@ public class PlayerController : MonoBehaviour
             if (_doubleScoreTimer <= 0)
                 _isDoubleScoreActive = false;
         }
+
+        if (_healthImmunityTimer > 0)
+        {
+            _healthImmunityTimer -= Time.deltaTime;
+            if (_healthImmunityTimer <= 0)
+                _isHealthImmunityeActive = false;
+        }
     }
 
     private void FixedUpdate()
@@ -80,7 +90,8 @@ public class PlayerController : MonoBehaviour
         AudioManager.Instance.PlaySFX(AudioTypeList.EnemyCollisionSound);
         Camera.main.GetComponent<CameraShake>().TriggerShake(0.15f, 0.3f);
 
-        _playerHealth -= _damageAmount;
+        float _actualDamageAmount = _isHealthImmunityeActive ? 0 : _damageAmount;
+        _playerHealth -= _actualDamageAmount;
         _playerHealth = Mathf.Clamp(_playerHealth, 0, 100);
 
         _gameUIPanel.UpdateHealth(_playerHealth);
@@ -92,6 +103,12 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.Instance.GameOver();
         Destroy(gameObject);
+    }
+
+    public void ActivateHealthImmunity(float _duration)
+    {
+        _isHealthImmunityeActive = true;
+        _healthImmunityTimer = _duration;
     }
 
     public void Heal(float _healAmount)

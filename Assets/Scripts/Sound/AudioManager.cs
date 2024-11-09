@@ -89,5 +89,6 @@ public enum AudioTypeList
     EnemyHit,
     BulletFire,
     EnemyDeath,
-    DoubleScorePowerup
+    DoubleScorePowerup,
+    HealthImmunityPowerup
 }
