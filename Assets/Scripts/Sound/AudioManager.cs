@@ -88,5 +88,6 @@ public enum AudioTypeList
     GameOverMenuButtonSound,
     EnemyHit,
     BulletFire,
-    EnemyDeath
+    EnemyDeath,
+    DoubleScorePowerup
 }

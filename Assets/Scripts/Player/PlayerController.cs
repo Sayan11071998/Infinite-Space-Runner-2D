@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -18,13 +19,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameUIController _gameUIPanel;
     [SerializeField] private GameOverUIController _gameOverPanel;
 
-    private Vector2 _playerMoveDirection;
-
     [Header("Bullet Properties")]
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletFireRate = 0.5f;
+
+    private Vector2 _playerMoveDirection;
     private float nextFireTime = 0f;
+    private bool _isDoubleScoreActive = false;
 
     private void Start()
     {
@@ -93,11 +95,20 @@ public class PlayerController : MonoBehaviour
         _gameUIPanel.UpdateHealth(_playerHealth);
     }
 
+    public IEnumerator DoubleScore(float duration)
+    {
+        _isDoubleScoreActive = true;
+        yield return new WaitForSeconds(duration);
+        _isDoubleScoreActive = false;
+    }
+
     public void IncreaseScore(float _ScoreValue)
     {
         AudioManager.Instance.PlaySFX(AudioTypeList.ScorePickupSound);
 
-        _playerScore += _ScoreValue;
+        float _actualPlayerScore = _isDoubleScoreActive ? _ScoreValue * 2 : _ScoreValue;
+        _playerScore += _actualPlayerScore;
+
         _gameUIPanel.UpdateScore(_playerScore);
     }
 

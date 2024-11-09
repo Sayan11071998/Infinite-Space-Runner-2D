@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - Bullet
   - BossEnemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
