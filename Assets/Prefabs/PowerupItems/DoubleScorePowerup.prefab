@@ -172,4 +172,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doubleScoreItemSpeed: 5
-  _powerupDuration: 10
+  _powerupDuration: 12
