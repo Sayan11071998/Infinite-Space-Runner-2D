@@ -21,5 +21,16 @@
 
 ### **💡 Challenge Time!**
 I’ve attached a playable link to the game—give it a try and let me know your thoughts! 💬 My personal high score is just over 8000—can you beat it? 🏆🎮
+Link: https://sayannandi.itch.io/infinite-space-runner-2d
+
 This project has been a rewarding journey, teaching me invaluable lessons in game mechanics, Unity UI, and interactive design. 🌈
+
 Let’s connect if you’re into game development, Unity, or just want to share your feedback!
+
+![InfiniteSpaceRunner_01](https://github.com/user-attachments/assets/bc6c04fd-1b26-4d84-b8ba-123be6e4f0bb)
+
+![InfiniteSpaceRunner_02](https://github.com/user-attachments/assets/ab7d1884-7f1b-4d0b-b08b-8f4facd4d678)
+
+![InfiniteSpaceRunner_03](https://github.com/user-attachments/assets/8186cd82-a07a-4393-9ce2-5a8f78ff99da)
+
+![InfiniteSpaceRunner_04](https://github.com/user-attachments/assets/833c6d6e-0a5d-4088-b83d-1d36cfa58ae1)
