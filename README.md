@@ -49,7 +49,7 @@ Into Unity, C# development, or building fun mechanics? I’d love to connect and
 ---
 
 ## Play Link
-
+https://sayannandi.itch.io/infinite-space-runner-2d
 
 [![Watch the video](https://img.youtube.com/vi/ju6sZYuM1L4/maxresdefault.jpg)](https://youtu.be/ju6sZYuM1L4)
 ### [Gameplay Video](https://youtu.be/ju6sZYuM1L4)
