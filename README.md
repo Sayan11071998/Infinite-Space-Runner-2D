@@ -1,31 +1,58 @@
-# ***🚀 Project Milestone: Infinite Space Runner! 🚀***
- 
-🌟 Big News! I’m thrilled to announce the completion of my latest Unity project: Infinite Space Runner, a classic space-themed arcade game reimagined with modern mechanics and design! 💻🎮 This has been an incredible journey, combining creativity, technical expertise, and a love for crafting fun and immersive gameplay experiences.
- 
-### **✨ Highlights of the Game:**
-- **🎮 Custom Spaceship Movement:** Designed smooth, responsive controls using Rigidbody2D in Kinematic mode for an out-of-this-world experience! 🚀
-- **🎨 Dynamic Gameplay:** Created player, enemy, and Final Boss prefabs. Enemies spawn randomly ⚔️, while the Final Boss presents an epic challenge with superior health and attack power. 🛡️
-- **⚡ Power-Ups and Collectibles:** Added score-boosting items, health packs, and power-ups like immunity for strategic gameplay. 💊✨
-- **🌌 Random Spawning and Optimization:** Implemented scripts to randomly spawn enemies and items while ensuring optimized performance. ♻️👾
-- **📊 Real-Time UI:** Built an interactive interface to seamlessly track health ❤️ and score 🏆.
-- **🎥 Special Effects:** Integrated a camera shake effect for impactful and immersive gameplay moments. 🎬💥
-- **📋 Polished Game Flow:** Designed intuitive Main Menu and Game Over screens for a smooth player experience. 🖱️🎮
-- **🎶 Audio and Game Management:** Leveraged the Singleton pattern to efficiently manage background music 🎵 and sound effects 🔊.
- 
-🌟 Key Takeaways:
-- **📈 Enhanced Skills:** Strengthened my Unity and C# expertise, particularly in scripting custom mechanics.
-- **🧠 Problem-Solving:** Tackled challenges like enemy behavior and player movement, boosting my problem-solving skills.
-- **🎨 Sprite Mastery:** Refined control over sprites and prefabs for positioning, rotation, and movement. 🖼️🎯
-- **🗃️ Organized Code:** Improved scalability with patterns like Singleton. 📂🛠️
-- **👥 User Experience Focus:** Learned the importance of creating smooth, player-centered designs. 🕹️💡
+# Infinite Space Runner
 
-### **💡 Challenge Time!**
-I’ve attached a playable link to the game—give it a try and let me know your thoughts! 💬 My personal high score is just over 8000—can you beat it? 🏆🎮
-Link: https://sayannandi.itch.io/infinite-space-runner-2d
+**Infinite Space Runner** is a fast-paced, space-themed 2D arcade game built in Unity, blending classic endless runner mechanics with modern gameplay systems and UI polish. Navigate through waves of enemies, collect power-ups, and face an epic Final Boss in this immersive space journey.
 
-This project has been a rewarding journey, teaching me invaluable lessons in game mechanics, Unity UI, and interactive design. 🌈
+---
 
-Let’s connect if you’re into game development, Unity, or just want to share your feedback!
+## 🧩 Gameplay Highlights
+
+- **Custom Spaceship Movement**  
+  Implemented responsive and fluid control using Rigidbody2D in Kinematic mode for smooth maneuvering.
+
+- **Dynamic Enemy System**  
+  Includes random enemy spawning and a challenging Final Boss with high health and offensive capabilities.
+
+- **Power-Ups and Collectibles**  
+  Features health packs, score boosters, and strategic power-ups such as temporary immunity to enhance survival.
+
+- **Randomized Spawning with Optimization**  
+  Scripted enemy and item spawning using object pooling and optimized performance techniques.
+
+- **Real-Time UI**  
+  Displays live updates for player health and score to keep users informed and engaged.
+
+- **Camera Effects**  
+  Integrated camera shake effect to enhance gameplay impact and feedback.
+
+- **Polished Game Flow**  
+  Includes a fully functional Main Menu, Game Over screen, and level transitions for a smooth player experience.
+
+- **Audio Management**  
+  Sound effects and background music managed via Singleton pattern to maintain consistent playback across scenes.
+
+---
+
+## 🎯 Key Takeaways
+
+- Strengthened Unity and C# scripting skills for mechanics, UI, and system architecture.
+- Solved gameplay challenges such as randomized enemy behavior and smooth player control.
+- Gained mastery over prefab design and sprite manipulation (positioning, rotation, movement).
+- Applied the Singleton design pattern for audio and game state management.
+- Focused on player-centric design with intuitive menus, feedback systems, and flow.
+
+---
+
+## 📬 Let’s Connect
+
+Into Unity, C# development, or building fun mechanics? I’d love to connect and chat about game development, design patterns, or your latest project. Feedback is always welcome!
+
+---
+
+## Play Link
+
+
+[![Watch the video](https://img.youtube.com/vi/ju6sZYuM1L4/maxresdefault.jpg)](https://youtu.be/ju6sZYuM1L4)
+### [Gameplay Video](https://youtu.be/ju6sZYuM1L4)
 
 ![InfiniteSpaceRunner_01](https://github.com/user-attachments/assets/bc6c04fd-1b26-4d84-b8ba-123be6e4f0bb)
 
